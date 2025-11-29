@@ -1,0 +1,42 @@
+#python
+def show_menu():
+    print("Please select a formula that suits your question")
+    print("Select a physics formula:")
+    print("a speed = Distance/ Time")
+    print("b Force = mass * Acceleration")
+    print("c Kinetic Energy=0.5 * mass * velocity^2") 
+    print("d Potential energy = mass x Accelertion due to gravity x height")
+def show_formula(choice):
+    if choice == "a":
+        distance = float(input("Enter distance (in meters):"))
+        time = float(input("Enter time (in seconds):"))
+        if time == 0:
+            print("Time cannot be zero.")
+        else:
+            speed = distance/ time
+            print(f"Speed = {speed}m/s")
+    elif choice == "b":
+        mass = float(input("Enter mass (in kg):"))
+        Acceleration = float(input("Enter accelereation (in ms^-2)"))
+        force = mass * Acceleration
+        print(f"Force = {force} N")
+    elif choice == "c":
+        mass = float(input("Enter mass(in kg):"))
+        velocity = float(input("Enter velocity (in m/s):"))
+        Kinetic_Energy = mass * velocity
+        print(f"Kinetic Energy = {Kinetic_Energy}J")
+    elif choice == "d":
+        mass = float(input("Enter mass (in kg):"))
+        Acceleration_due_to_gravity = float(input("Enter 10.0 or 9.8 which is standard"))
+        height = float(input("Enter height (in meters):"))
+        if Acceleration_due_to_gravity == 10.0 or 9.8:
+            print("That is not the standard, standard is 10.0 or 9.8")
+        else:
+            Potential_Energy = mass * Acceleration_due_to_gravity * height
+            print(f"Potential Energy = {Potential_Energy}J")
+    else:
+        print("Invalid choice. Please select a, b, c, d.")
+#Main program
+show_menu()
+user_input = input("Enter your choice (a/b/c/d):").strip().lower()
+show_formula(user_input)
