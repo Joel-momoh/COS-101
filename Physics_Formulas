@@ -5,7 +5,7 @@ def show_menu():
     print("a speed = Distance/ Time")
     print("b Force = mass * Acceleration")
     print("c Kinetic Energy=0.5 * mass * velocity^2") 
-    print("d Potential energy = mass x Accelertion due to gravity x height")
+    print("d Potential energy = mass * Accelertion due to gravity * height")
 def show_formula(choice):
     if choice == "a":
         distance = float(input("Enter distance (in meters):"))
@@ -40,3 +40,4 @@ def show_formula(choice):
 show_menu()
 user_input = input("Enter your choice (a/b/c/d):").strip().lower()
 show_formula(user_input)
+
